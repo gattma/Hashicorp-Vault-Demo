@@ -1,0 +1,36 @@
+Unseal Key 1: QPk813RDcW6y1VoAQS5TkCvegYFI1oSi5WD9L60x6eeb
+Unseal Key 2: ZVtgTLUWX3VqRFWx+w7ewB/yowhHdCtbiAgaZAbYY5S8
+Unseal Key 3: PgNozlx6xjNbFSuuHaW9aPuMXReWwo8aeThClU1ZSX8Y
+Unseal Key 4: 3HH0aGdDCmhRa1H4hSdt1HX0BdOJ6hAiUJckjrcojglG
+Unseal Key 5: 7Jj7xrHYVXn7I3la+s+CkccNh7g6xffy16Kmtam3Lfjr
+
+Initial Root Token: s.s69b579MXAezuhQbVjEC5QAx
+
+Vault initialized with 5 key shares and a key threshold of 3. Please securely
+distribute the key shares printed above. When the Vault is re-sealed,
+restarted, or stopped, you must supply at least 3 of these keys to unseal it
+before it can start servicing requests.
+
+Vault does not store the generated master key. Without at least 3 keys to
+reconstruct the master key, Vault will remain permanently sealed!
+
+It is possible to generate new unseal keys, provided you have a quorum of
+existing unseal keys shares. See "vault operator rekey" for more information.
+
+Key                              Value
+---                              -----
+wrapping_token:                  s.o2kh9cdTmI8JFzple2O3n7KT
+wrapping_accessor:               OeM66DgW4heYzj0ue0xbXLXT
+wrapping_token_ttl:              2m
+wrapping_token_creation_time:    2022-04-08 07:48:21.420698039 +0000 UTC
+wrapping_token_creation_path:    auth/token/create
+wrapped_accessor:                kypZuHpEbn3RD6EyR42sV3TC
+Key                  Value
+---                  -----
+token                s.LuuJOhEK56WtlZkEI7XFDp9k
+token_accessor       kypZuHpEbn3RD6EyR42sV3TC
+token_duration       768h
+token_renewable      true
+token_policies       ["autounseal" "default"]
+identity_policies    []
+policies             ["autounseal" "default"]

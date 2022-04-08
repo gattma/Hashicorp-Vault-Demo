@@ -1,0 +1,34 @@
+global:
+  openshift: true
+
+injector:
+  enabled: true
+
+server:
+  dev:
+    enabled: false
+  ha:
+    enabled: true
+    replicas: 3
+    raft:
+      enabled: true
+      config: |
+        ui = true
+        listener "tcp" {
+          tls_disable = 1
+          address = "[::]:8200"
+          cluster_address = "[::]:8201"
+        }
+        storage "raft" {
+          path = "/vault/data"
+        }
+        service_registration "kubernetes" {}
+
+        seal "transit" {
+          address = "${UNSEALER_ADDRESS}"
+          token = "${CLIENT_TOKEN}"
+          disable_renewal = "false"
+          key_name = "autounseal"
+          mount_path = "transit/"
+          tls_skip_verify = "true"
+        }

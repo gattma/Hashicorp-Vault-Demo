@@ -1,0 +1,7 @@
+spec:
+  template:
+    metadata:
+      annotations:
+        vault.hashicorp.com/agent-inject: 'true'
+        vault.hashicorp.com/role: 'demo-app'
+        vault.hashicorp.com/agent-inject-secret-database-config.txt: 'secret/data/demo/app'

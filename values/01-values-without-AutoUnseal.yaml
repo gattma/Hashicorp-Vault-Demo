@@ -1,0 +1,14 @@
+global:
+  openshift: true
+
+injector:
+  enabled: true
+
+server:
+  dev:
+    enabled: false
+  ha:
+    enabled: true
+    replicas: 3
+    raft:
+      enabled: true
